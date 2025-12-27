@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      width: 300px;
+      height: 250px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .grid-item {
+      display: flex;
+      background-color:whitesmoke;
+      border: 1px solid black;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      align-items:end;
+      justify-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>1st Box Layout (Vertical)</h2>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+</body>
+</html>

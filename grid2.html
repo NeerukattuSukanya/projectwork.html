@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+      display: grid;
+      grid-template-rows: 1fr 1fr;  
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px;
+      width: 400px;
+      height: 250px;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .box {
+      background-color: whitesmoke;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    
+    .box1 {
+      grid-row: 1 / span 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+    
+</body>
+</html>

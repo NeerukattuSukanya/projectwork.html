@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sun animation</title>
+</head>
+
+<style>
+    body{
+      margin: 0;
+      height: 100%;
+      width:100%;
+      padding:0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:black;
+      
+    }
+    .container {
+      width: 600px;
+      height: 350px;
+      background: linear-gradient(to bottom, orange, darkorange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .sun {
+      width: 120px;
+      height: 120px;
+      border: 3px solid yellow;
+      border-radius: 50%;
+      background: radial-gradient(circle, yellow 30%, orange 70%,);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 20px 5px yellow;
+        transform: scale(1);
+      }
+      100% {
+        box-shadow: 0 0 50px 20px  orange;
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sun"></div>
+  </div>
+
+    
+</body>
+</html>

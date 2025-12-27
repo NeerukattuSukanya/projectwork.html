@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVELOPER </title>
+    </head>
+<style>
+.body{
+    margin:0;
+    font-family:'Roboto',sans-serif; 
+    scroll-behavior:smooth;
+    
+}
+h1,h2,h3{
+    font-family:'poppins',sans-serif;
+    font-weight:600;
+}
+    
+.navbar{
+    display:flex;
+    position:relative;
+    background-color:grey;
+    justify-content:space-between;
+    align-items: center;
+    padding:20px;
+    height:50px;
+    gap:30px;
+    color:black;
+    
+    
+}
+.navbar_logo{
+    position:absolute;
+    left:20px;
+    font-weight:bold;
+    text-decoration:none;
+    color:black;
+    gap:30px;
+
+}
+.navbar_menu{
+    display:flex;
+    gap:40px;
+    color:black;
+    margin:0px,20px;
+
+}
+.navbar_menu a {
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    gap:20px;
+    
+
+}
+
+.navbar_menu a:hover{
+    color:goldenrod;
+
+}
+.hero{
+    background-image:url("https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?cs=srgb&dl=pexels-pixabay-39284.jpg&fm=jpg");
+    height:90vh;
+    background-size:cover ;
+    text-align:center;
+    background-position:center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    color: white;
+    position: relative;
+
+}
+.hero h1{
+   display:grid;
+   background-color: #afaeae;
+   color:white;
+   padding:20px;
+   font-size:80px;
+   position:absolute;
+   top:30%;
+   left:40%;
+   text-align: center;
+   letter-spacing:2px ;
+
+}
+.hero h1 {
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.hero h1:hover {
+    transform: scale(1.05);
+}
+
+.hero p{
+    text-align:bottom;
+    font-size:20px;
+    letter-spacing: 1px;
+    color:white;
+}
+.hero button{
+    background:black;
+    border:none;
+    color:white;
+    padding:12px 25px;
+    font-size:1rem;
+    border-radius:30px;
+    cursor:pointer;
+    transition:all 0.3s ease ;
+    transform:scale(1);
+}
+.hero button:hover{
+    background:gold;
+    transform:scale(1.1);
+    box-shadow:0 4px 12px rgba(0.0.0.0.3);
+    
+
+}
+.card .meta{
+    padding:10px;
+    text-align:center;
+   
+
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h3{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#333;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr) ;
+    gap:2px;
+    
+}
+.portfolio .card{
+    background: #fff;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    overflow:hidden ;
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+    text-align: center;
+}
+.portfolio.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+.portfolio .card img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius:10px;
+    
+    
+}
+.portfolio.meta{
+    padding:15px;
+}
+.portfolio.meta{
+    font-size:18px;
+    margin-bottom:5px;
+    color:#222;
+}
+.portfolio.meta p{
+    font-size:14px ;
+    color:#666;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    background:#3ab0a2;
+    background-image:url("https://www.transparenttextures.com/patterns/sandpaper.png");
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    
+}
+.stat{
+    flex:1 1 150px;
+    margin:15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.stat h3{
+    font-size:3rem;
+    margin:10px 0;
+}
+.stat p{
+    font-size:1.1rem;
+    margin:0;
+}
+.testimonials{
+    padding:60px 20px;
+    text-align:center;
+    background: #f4f4f4;
+}
+.testimonials h2{
+    font-size:2rem;
+    margin-bottom:40px;
+}
+.testimonials.grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.card.testi img{
+    border-radius:50%;
+    margin-bottom:15px;
+}
+.card.testi.quote p{
+    font-style:italic;
+    margin-bottom:10px;
+
+}
+
+
+.contact{
+    text-align:center;
+    margin:20px;
+    background-color: teal;
+    width:100%;
+    height:60vh;
+    padding-top:20px ;
+}
+
+.contact h2{
+ margin-bottom:10px;
+}
+
+
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start; 
+    max-width:900px;
+    margin:auto;
+    gap:40px;
+}
+   
+.contact-info{
+    flex:1;
+    font-size:16px;
+    line-height:1.6;
+    text-align:right;
+}
+.contact-form{
+    flex:1;
+}
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.contact-form button{
+    width:120px;
+    padding:10px;
+    background-color:teal;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.social-icons a{
+    margin-right:10px;
+    font-size:20px;
+    color:white;
+
+}
+.footer{
+    text-align:center;
+    padding:18px 12px;
+    background:#f4f4f4;
+    color:#333;
+}
+@media(max-width:700px){
+    
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .hero h1{
+        font-size:36px;
+    }
+}
+@media(max-width:450px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+    .hero h1 {
+         font-size:28px;
+    }
+    
+}
+
+    
+</style>
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="nav_logo">DEVELOPER</a>
+        <div class="nav_menu">
+          <a href="#">HOME</a>
+          <a href="#">PORTFOLIO</a>
+          <a href="#">ABOUT ME</a>
+          <a href="#">TESTIMONIALS</a>
+          <a href="#">CONTACT</a>
+        </div>
+    </div>
+
+   <div class="hero">
+        <h1>WEB DEVELOPER</h1>
+        <p>Bring your dreams to life - modern, responsive websites and web applications that convert visitors into customers.</p>
+        <a class="hire" href="#contact">HIRE ME</a>
+        </div>
+    <div class="card">
+         <h3>LATEST WORKS</h3>
+        <div class ="grid" id="portfolio">
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work1.jpg"alt="portfolio">
+                <div class="meta"><h3>creative Joe</h3><p>UI/frontend</p></div>
+                </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work2.jpg"alt="potfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work3.png"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work7.jpg"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article classs="card">
+                <img src="https://themewagon.github.io/Developer/img/work8.png"alt="portfolio">
+                <div class="meta"><h3>creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work4.jpg"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work5.jpg"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work6.jpg"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            <article class="card">
+                <img src="https://themewagon.github.io/Developer/img/work1.jpg"alt="portfolio">
+                <div class="meta"><h3>Creative Joe</h3><p>UI/frontend</p></div>
+            </article>
+            </div>
+
+            <div class="VIEW ALL"></div>
+            <aside class="hero-card">
+                <h3>Some cool facts About Me</h3>
+                   <div class="stats">
+                        <div class="stat"><h3>101</h3><p>conferences</p></div>
+                        <div class="stat"><h3>92</h3><p>Lines of code</p></div>
+                        <div class="stat"><h3>54</h3><p>Hours of work</p></div>
+                        <div class="stat"><h3>99</h3><p>Repositories in Git</p></div>
+                        <div class="stat"><h3>124</h3><p>Mobile App</p></div>
+                        <div class="stat"><h3>45</h3><p>Happy Client</p></div>
+                </div>
+                </aside>
+                </section>
+            <section id="testimonials" class="section">
+                <h2>What Clients Say</h2>
+                <div class="grid">
+                    <div class="card testi">
+                        <img src="https://themewagon.github.io/Developer/img/testimonial_31-190x190.jpg"alt="client">
+                        <div class="quote">
+                            <p>In at accumsan risus. Nam id volutpat ante.Etiam vel mi mattis,Vulputate nunc nec,sodales nibh.etiam nulla magna,gravida eget ultricies sit amet.</p>
+                            <strong>Jane Doe</strong><br><small>Head of Ideas,Technext</small>
+                        </div>
+                    </div>
+                <div class ="card testi">
+                    <img src="https://themewagon.github.io/Developer/img/testimonial_11-190x190.jpg"alt="client">
+                    <div class="quote">
+                        <p>In at accumsan risus. Nam id volutpat ante.Etiam vel mi mattis,Vulputate nunc nec,sodales nibh.etiam nulla magna,gravida eget ultricies sit amet.</p>
+                        <strong>Jane Doe</strong><br><small>CEO,Apple INC</small>
+                    </div>
+                </div>
+                <div class="card testi">
+                <img src=" https://themewagon.github.io/Developer/img/testimonial_22-190x190.jpg"alt="client">
+                <div class="quote">
+                    <p>In at accumsan risus. Nam id volutpat ante.Etiam vel mi mattis,Vulputate nunc nec,sodales nibh.etiam nulla magna,gravida eget ultricies sit amet.</p>
+                    <strong>ALBERT DOE</strong><br><small>TEAM LEAD DESIGN STUDIO</small>
+                </div>
+                </div>
+            </section>
+            <div class="contact">
+                <h2>contact</h2>
+                   <div class="contact-container">
+                    <div class="contact-form">
+                      <form>
+                        <input type="text" placeholder="Name">
+                        <input type="Email"placeholder="Email">
+                        <textarea  placeholder="say something"....></textarea>
+                        <button type="submit">submit</button>
+                    </form>  
+                </div>
+
+            <div class="contact-info">
+                 <p><strong>Address:</strong> 308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111</p>
+                 <p><strong>Cell No:</strong> 1-800-123-456</p>
+                 <p><strong>Email:</strong> developer@gmail.com</p>
+            </div>
+
+            <div class="social-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                   <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            </div>
+            </div>
+        </div>
+           <footer class="footer">2025 developer portfolio.all rights reserved</footer>
+            
+            
+        </body>
+    </html>
+                
+
+        
+            
+                
+            
+       

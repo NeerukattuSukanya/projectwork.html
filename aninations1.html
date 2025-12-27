@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spinning disc</title>
+</head>
+<body>
+    <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;  /* black background */
+    }
+
+    .disc {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: url("https://media.tenor.com/skDjYlLFYogAAAAM/spin-disc.gif") no-repeat center;
+      background-size: cover;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="disc"></div>
+</body>
+</html>
+
+    
+</body>
+</html>
